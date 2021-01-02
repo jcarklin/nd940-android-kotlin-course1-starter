@@ -22,6 +22,7 @@ class InstructionsFragment : Fragment() {
                               savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
 
+
         binding.button.setOnClickListener {
             findNavController().navigate(InstructionsFragmentDirections.actionInstructionsDestinationToShoeListFragment())
         }

@@ -2,13 +2,18 @@ package com.udacity.shoestore
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
+
+//Todo Reformat pages, add animations
+//double check rubric
+//Update ReadMe
+//Check dimens.xml
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         sharedViewModel = ViewModelProvider(this).get(SharedViewModel::class.java)
 
         binding.fabAddNewShoe.setOnClickListener { sharedViewModel.onFabClicked() }
-        val navController = findNavController(R.id.nav_host_fragment_container)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+        val navController = navHostFragment.navController
+
         setSupportActionBar(binding.toolbar)
 
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.login_destination,
@@ -38,34 +46,7 @@ class MainActivity : AppCompatActivity() {
                 binding.fabAddNewShoe.hide()
             }
         }
-
-        sharedViewModel.loggedIn.observe(this, Observer {
-                isLoggedIn -> if (isLoggedIn.isBlank()) {
-                    navController.navigate(R.id.login_destination)
-                } else {
-                    navController.navigate(R.id.welcome_destination)
-                }
-        })
-
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration)
 
     }
-
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        binding.toolbar.inflateMenu(R.menu.overflow_menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        Timber.i("menu item clicked")
-//        if (item.itemId==R.id.menu_item_logout) {
-//            sharedViewModel.onLoggedOut()
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
-//
-//    override fun onSupportNavigateUp(): Boolean {
-//        val navController = this.findNavController(R.id.nav_host_fragment_container)
-//        return navController.navigateUp()
-//    }
 }

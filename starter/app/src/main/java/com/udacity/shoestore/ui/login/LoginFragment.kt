@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.SharedViewModel
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -27,6 +28,12 @@ class LoginFragment : Fragment() {
         binding.buttonLogin.setOnClickListener { loginUser() }
         binding.buttonRegister.setOnClickListener { loginUser() }
 
+        sharedViewModel.loginClicked.observe(viewLifecycleOwner, {
+                isClicked -> if (isClicked) {
+            findNavController().navigate(LoginFragmentDirections.actionLoginDestinationToWelcomeDestination())
+            sharedViewModel.onLoginClickedFinished()
+        }
+        })
 
         return binding.root
     }
@@ -36,7 +43,7 @@ class LoginFragment : Fragment() {
         if (binding.etEmailAddress.text.isBlank() || binding.etPassword.text.isBlank()) {
             Toast.makeText(context, R.string.error_enter_login_details, Toast.LENGTH_LONG).show()
         } else {
-            sharedViewModel.onLoggedIn(binding.etEmailAddress.text.toString())
+            sharedViewModel.onLoginClicked()
         }
     }
 }

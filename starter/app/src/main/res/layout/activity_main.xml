@@ -27,14 +27,14 @@
             android:id="@+id/fab_add_new_shoe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right|end"
+            android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
             android:src="@drawable/ic_add"
             android:contentDescription="@string/add_shoe_button"
             app:layout_anchor="@id/nav_host_fragment_container"
             app:layout_anchorGravity="bottom|right|end" />
 
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment_container"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
