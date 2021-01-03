@@ -8,11 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
-
-//Todo Reformat pages, add animations
-//double check rubric
-//Update ReadMe
-//Check dimens.xml
+//Todo double check rubric, Update ReadMe, Check dimens.xml
 
 
 class MainActivity : AppCompatActivity() {

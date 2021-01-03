@@ -23,14 +23,16 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
         </com.google.android.material.appbar.AppBarLayout>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_add_new_shoe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_add"
+            android:background="@color/primaryColor"
             android:contentDescription="@string/add_shoe_button"
+            android:src="@drawable/ic_add"
             app:layout_anchor="@id/nav_host_fragment_container"
             app:layout_anchorGravity="bottom|right|end" />
 

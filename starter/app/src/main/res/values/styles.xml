@@ -3,9 +3,11 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="buttonStyle">@style/buttonGradient</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -21,8 +23,9 @@
         <item name="android:layout_marginLeft">@dimen/layout_margin</item>
         <item name="android:layout_marginRight">@dimen/layout_margin</item>
         <item name="android:padding">@dimen/small_padding</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/primaryDarkColor</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="heading">
@@ -33,7 +36,7 @@
         <item name="android:fontFamily">cursive</item>
         <item name="android:padding">@dimen/small_padding</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/primaryColor</item>
         <item name="android:textSize">@dimen/main_heading_size</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -44,4 +47,11 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="buttonGradient" parent="TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:paddingEnd">@dimen/button_padding</item>
+        <item name="android:paddingStart">@dimen/button_padding</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
 </resources>

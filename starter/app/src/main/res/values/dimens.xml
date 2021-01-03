@@ -3,5 +3,6 @@
     <dimen name="main_heading_size">32sp</dimen>
     <dimen name="small_padding">8dp</dimen>
     <dimen name="layout_margin">16dp</dimen>
+    <dimen name="button_padding">24dp</dimen>
 
 </resources>
