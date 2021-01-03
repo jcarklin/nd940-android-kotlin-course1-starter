@@ -16,7 +16,7 @@
     <string name="button_instructions">Instructions</string>
     <string name="instructions_heading">Instructions</string>
     <string name="button_continue">Continue</string>
-    <string name="instructions">The following page, the shoe listing page,  shows a list of shoes that have been entered. At first there will be no shoes. Use the button for adding a new shoe which will give you a form for adding a shoe entry. Once saved the entry will be added to the list. Note that saved shoes only last as long as the app is running.</string>
+    <string name="instructions">The following page is the shoe listing page. This page shows a list of shoes that you have entered. On first arriving at this page there will be no shoes listed. Use the + button for adding a new shoe. This will take you to a form used for adding a new shoe to the list. Note that saved shoes only last as long as the app is running.</string>
     <string name="shoes_list_heading">Shoes List</string>
     <string name="item_shoe_name">Shoe name: %s</string>
     <string name="item_shoe_size">Shoe size: %s</string>
