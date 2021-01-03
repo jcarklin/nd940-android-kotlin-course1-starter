@@ -8,5 +8,4 @@
         android:centerColor="@color/primaryColor"
         android:endColor="@color/primaryDarkColor"/>
 </shape>
-<!-- ToDo credit https://android.jlelse.eu/creating-a-beautiful-button-android-8b2ee0ba4b3d
-https://www.youtube.com/watch?v=lejBUeOSnf8&ab_channel=Stevdza-San for animations -->
+<!-- ToDo credit https://android.jlelse.eu/creating-a-beautiful-button-android-8b2ee0ba4b3d-->

@@ -9,7 +9,8 @@
             type="com.udacity.shoestore.ui.shoe.details.ShoeDetailsViewModel" />
         <import type="com.udacity.shoestore.ui.shoe.details.ConvertDouble"/>
     </data>
-
+    <!--I used ConstraintLoyout here as the layout was a little more complex than a simple row or column of elements.
+    Lining up the labels and textviews, along with the header and buttons required more than a simple LinearLayout could offer -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

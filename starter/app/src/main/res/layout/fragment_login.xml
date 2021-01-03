@@ -2,7 +2,9 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<!--I used ConstraintLoyout here in order to position the 2 buttons next to each other and under the textviews.
+I probably could have used the simpler LinearLayout here but would then need to have included a
+horizontal LinearLayout for the buttons inside a vertical LinearLayout. This might have neen simpler but seemed clumsy to me -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
